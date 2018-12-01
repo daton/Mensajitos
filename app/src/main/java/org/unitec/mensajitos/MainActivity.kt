@@ -20,9 +20,9 @@ var mensajes=ArrayList<Mensaje>()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-           boton.setOnClickListener {
-               TareaMensajes().execute(null,null,null)
-           }
+           //boton.setOnClickListener {
+          //     TareaMensajes().execute(null,null,null)
+          // }
 
 
 
@@ -32,7 +32,7 @@ var mensajes=ArrayList<Mensaje>()
         override fun onPreExecute() {
             super.onPreExecute()
 
-              miid=   textoId.text.toString();
+            //  miid=   textoId.text.toString();
 
             //miid="5bb42224b1ff2b18b3c139be"
         }
@@ -41,7 +41,7 @@ var mensajes=ArrayList<Mensaje>()
             //Aqui dentroa vamos a establecer nuestra conexion al back end
             //pero no podemos mostrar nada en las componentes visuales
             //Primero la url
-            var url="https://topoyiyo.herokuapp.com/api/mensaje/"+miid
+            var url="https://topoyiyo.herokuapp.com/api/mensaje/"
 
             //Generamos un objeto de la clase RestTemplate
             var rest=RestTemplate()
